@@ -5,4 +5,8 @@ describe 'Merchant model spec' do
     merchant = create(:merchant)
     expect(merchant).to respond_to(:invoices)
   end
+  it "has many items" do
+    merchant = create(:merchant)
+    expect(merchant).to respond_to(:items)
+  end
 end
