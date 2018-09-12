@@ -1,1 +1,0 @@
-json.(@merchant, :id, :name)

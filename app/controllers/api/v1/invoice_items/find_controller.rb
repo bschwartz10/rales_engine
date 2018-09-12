@@ -3,10 +3,13 @@ module Api::V1::InvoiceItems
 
     def index
       @invoice_items = InvoiceItem.where(invoice_item_params)
+      render 'api/v1/invoice_items/index'
+
     end
 
     def show
       @invoice_item = InvoiceItem.find_by(invoice_item_params)
+      render 'api/v1/invoice_items/show'
     end
 
     private

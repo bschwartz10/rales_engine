@@ -3,10 +3,12 @@ module Api::V1::Transactions
 
     def index
       @transactions = Transaction.where(transaction_params)
+      render 'api/v1/transactions/index'
     end
 
     def show
       @transaction = Transaction.find_by(transaction_params)
+      render 'api/v1/transactions/show'
     end
 
   private

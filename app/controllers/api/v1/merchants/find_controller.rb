@@ -3,10 +3,12 @@ module Api::V1::Merchants
 
     def index
       @merchants = Merchant.where(merchant_params)
+      render 'api/v1/merchants/index'
     end
 
     def show
       @merchant = Merchant.find_by(merchant_params)
+      render 'api/v1/merchants/show'
     end
 
   private

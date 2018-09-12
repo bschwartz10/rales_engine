@@ -3,10 +3,12 @@ module Api::V1::Customers
 
     def index
       @customers = Customer.where(customer_params)
+      render 'api/v1/customers/index'
     end
 
     def show
       @customer = Customer.find_by(customer_params)
+      render 'api/v1/customers/show'
     end
 
   private

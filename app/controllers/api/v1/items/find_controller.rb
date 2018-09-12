@@ -3,10 +3,12 @@ module Api::V1::Items
 
     def index
       @items = Item.where(item_params)
+      render 'api/v1/items/index'
     end
 
     def show
       @item = Item.order(id: :asc).find_by(item_params)
+      render 'api/v1/items/show'
     end
 
     private
